@@ -18,7 +18,7 @@ export default function HeroSection() {
             <div className="relative">
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-blue-400/30 bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm">
                 <img
-                  src="/public/Profile_pic1.jpg"
+                  src="public/Profile_pic1.jpg"
                   alt="Pranab Prakash Das"
                   width={128}
                   height={128}
