@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 17 24 39;
+    --foreground: 243 244 246;
+    --card: 6 78 59;
+    --card-foreground: 243 244 246;
+    --popover: 6 78 59;
+    --popover-foreground: 243 244 246;
+    --primary: 34 211 238;
+    --primary-foreground: 243 244 246;
+    --secondary: 139 92 246;
+    --secondary-foreground: 243 244 246;
+    --muted: 6 78 59;
+    --muted-foreground: 148 163 184;
+    --accent: 139 92 246;
+    --accent-foreground: 243 244 246;
+    --destructive: 132, 84, 227;
+    --destructive-foreground: 243 244 246;
+    --border: 6 78 59;
+    --input: 6 78 59;
+    --ring: 34 211 238;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-foreground min-h-screen;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl border shadow-2xl;
+    background: linear-gradient(135deg, rgba(6, 78, 59, 0.3) 0%, rgba(139, 92, 246, 0.15) 100%);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(34, 211, 238, 0.1);
+  }
+
+  .glass-card-hover {
+    @apply hover:shadow-cyan-500/20 transition-all duration-300;
+    transition: all 0.3s ease;
+  }
+
+  .glass-card-hover:hover {
+    background: linear-gradient(135deg, rgba(6, 78, 59, 0.5) 0%, rgba(139, 92, 246, 0.3) 100%);
+    border: 1px solid rgba(34, 211, 238, 0.4);
+    box-shadow: 0 8px 32px rgba(34, 211, 238, 0.2), 0 0 0 1px rgba(139, 92, 246, 0.15);
+    transform: translateY(-2px);
+  }
+}
